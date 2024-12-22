@@ -1,0 +1,223 @@
+/* Import Google Fonts */
+/* Hiermee importeer je verschillende Google Fonts die in je project worden gebruikt. */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@100&family=Roboto:ital,wght@0,400;1,300&family=Satisfy&family=Simonetta:ital@1&family=Tangerine:wght@700&display=swap');
+
+/* Universele selector */
+/* Deze selector zorgt ervoor dat voor alle elementen op de pagina, de marges en padding op nul worden gezet en dat de padding en borders worden meegenomen in de breedteberekening dankzij box-sizing: border-box. Dit voorkomt onverwachte ruimte rondom elementen. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Algemene stijlen voor het hele document */
+/* Hier worden de basisstijlen voor de body ingesteld. Een standaard lettertype wordt toegewezen en marges en padding worden ook op nul gezet om te zorgen voor consistente opmaak in verschillende browsers. */
+body {
+    font-family: 'Montserrat', sans-serif; /* Montserrat is een eenvoudig leesbaar font */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Navbar styling */
+/* De navigatiebalk gebruikt Flexbox om de inhoud netjes uit te lijnen. Het logo wordt naar links uitgelijnd en het menu naar rechts. */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo links, menu rechts */
+    align-items: center; /* Verticaal centreren van alle elementen in de navbar */
+    background-color: #93939c; /* Grijze achtergrondkleur */
+    padding: 10px 40px; /* Ruimte rondom de navigatie */
+    height: 70px;
+    box-sizing: border-box; /* Zorgt ervoor dat padding wordt meegerekend in de hoogte */
+}
+
+.navbar-logo {
+    width: 120px; /* Grootte van het logo */
+}
+
+/* Menu styling */
+/* Hier worden de lijstitems van het navigatiemenu gestyled. Flexbox zorgt ervoor dat de items horizontaal naast elkaar worden geplaatst. */
+.menu {
+    list-style: none; /* Verwijder de standaard opsommingstekens van de lijst */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Verticaal gecentreerd */
+}
+
+.menu li {
+    margin-left: 30px; /* Ruimte tussen de menu-items */
+    font-size: 20px;
+    font-weight: 600; /* Vetgedrukte letters voor duidelijkheid */
+    color: white; /* Witte tekstkleur voor zichtbaarheid */
+    cursor: pointer; /* Verandert de cursor naar een handje om te tonen dat de items klikbaar zijn */
+}
+
+.menu li:hover {
+    color: #d1d1d1; /* Verandert de tekstkleur bij hover voor een interactief effect */
+}
+
+/* Shopping bag icon styling */
+/* Het winkelwagen-icoon wordt netjes naast de tekst uitgelijnd. */
+.cart-icon {
+    display: inline-block; /* Houdt het inline met de rest van de items */
+}
+
+.cart-icon i {
+    color: white; /* Kleur van het shopping bag icoon */
+    font-size: 24px; /* Grootte van het icoon */
+}
+
+/* Shop grid container */
+/* Algemene Shop Styling */
+.shop {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #676772; /* Grijstint consistent met de bovenbalk */
+}
+
+/* Product Grid Layout */
+.products {
+    width: 70vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Productkaart Styling */
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 285px;
+    margin: 10px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); /* Zachte schaduw, geen afgeronde hoeken */
+}
+
+.product:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5); /* Hover effect */
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+
+.product img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes binnen de ruimte past */
+}
+
+/* Tekst Styling binnen de producten */
+.product h3 {
+    font-family: "Calibri", sans-serif;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #676772; /* Grijze kleur consistent met de rest */
+}
+
+/* Sort sectie voor prijs en knoppen */
+.sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+}
+
+/* Prijsweergave Styling */
+p {
+    font-family: "Calibri", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 50px;
+    color: #676772;
+}
+
+/* Winkelwagenknop Styling */
+.addToCartBttn {
+    background-color: #9999a1; /* Grijs consistent met bovenbalk */
+    color: white;
+    border: none;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.addToCartBttn:hover {
+    background-color: #676772; /* Donkerdere hover-kleur */
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Footer styling */
+/* De footer gebruikt een kleurverloop en Flexbox voor het uitlijnen van de tekst en het logo. */
+.footer {
+    background: linear-gradient(45deg, rgb(125, 125, 129) 0%, rgb(198, 198, 201) 100%); /* Kleurverloop achtergrond */
+    color: #fff; /* Witte tekstkleur */
+    padding: 20px; /* Ruimte rondom de tekst */
+    text-align: center; /* Tekst gecentreerd */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* De footer vult de volledige breedte */
+}
+
+/* Inhoud van de footer */
+/* Flexbox wordt gebruikt om de tekst en het logo netjes naast elkaar te plaatsen en uit te lijnen. */
+.footer-content {
+    display: flex;
+    justify-content: center; /* Horizontaal gecentreerd */
+    align-items: center; /* Verticaal gecentreerd */
+    gap: 10px; /* Ruimte tussen de copyrighttekst, logo, en "All rights reserved" */
+}
+
+/* Styling voor het logo in de footer */
+.footer-logo {
+    height: 14px; /* Klein logo om naast de tekst te passen */
+    width: auto;
+}
+
+/* Tekst in de footer */
+.footer-content span {
+    font-size: 14px; /* Consistente tekstgrootte */
+    font-weight: 600;
+    color: white;
+}
+
+/* Responsive layout aanpassingen */
+  
+/* 3 kolommen bij schermbreedtes kleiner dan 1200px */
+@media only screen and (max-width:1200px) {
+    .products {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* 2 kolommen bij schermbreedtes kleiner dan 800px */
+@media only screen and (max-width: 800px) {
+    .products {
+        grid-template-columns: repeat(2,1fr);
+    }
+}   
+
+/* 1 kolom bij schermbreedtes kleiner dan 500px */
+@media only screen and (max-width:500px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
